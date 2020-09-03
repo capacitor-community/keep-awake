@@ -49,6 +49,8 @@ No extra steps required 🙂.
 You have to register your plugin in your app main activity. See official [Capacitor docs](https://capacitor.ionicframework.com/docs/plugins/android/#export-to-capacitor)
 
 ```java
+import nl.kevinboosten.keepawake.KeepAwake;
+
 public class MainActivity extends BridgeActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
