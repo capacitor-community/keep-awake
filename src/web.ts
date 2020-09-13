@@ -5,10 +5,9 @@ export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   constructor() {
     super({
       name: 'KeepAwake',
-      platforms: ['web']
+      platforms: ['web'],
     });
   }
-
   async keepAwake(): Promise<void> {
     console.log('KeepAwake does not support web');
     return Promise.resolve();

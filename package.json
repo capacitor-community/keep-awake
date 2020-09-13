@@ -1,30 +1,43 @@
 {
-  "name": "@boosten/capacitor-keep-awake",
+  "name": "@capacitor-community/keep-awake",
   "version": "0.0.1",
   "description": "Prevent your screen from getting some sleep!",
-  "main": "dist/esm/index.js",
+  "main": "dist/plugin.js",
+  "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "lint": "npm run prettier -- --check && npm run swiftlint -- lint",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "swiftlint": "node-swiftlint",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "Kevin Boosten",
+  "author": "Kevin Boosten <kboosten@icloud.com>",
   "license": "MIT",
-  "dependencies": {
-    "@capacitor/core": "latest"
-  },
   "devDependencies": {
-    "typescript": "^3.2.4",
-    "@capacitor/ios": "latest",
-    "@capacitor/android": "latest"
+    "@capacitor/android": "^2.4.1",
+    "@capacitor/core": "^2.4.1",
+    "@capacitor/ios": "^2.4.1",
+    "@ionic/prettier-config": "^1.0.0",
+    "@ionic/swiftlint-config": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-java": "^0.8.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^2.21.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "~3.8.3"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^2.4.1"
   },
   "files": [
     "dist/",
     "ios/",
     "android/",
-    "BoostenCapacitorKeepAwake.podspec"
+    "CapacitorCommunityKeepAwake.podspec"
   ],
   "keywords": [
     "capacitor",
@@ -39,11 +52,13 @@
       "src": "android"
     }
   },
+  "prettier": "@ionic/prettier-config",
+  "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Boosten/capacitor-keep-awake.git"
+    "url": "https://github.com/capacitor-community/keep-awake.git "
   },
   "bugs": {
-    "url": "https://github.com/Boosten/capacitor-keep-awake.git/issues"
+    "url": "https://github.com/capacitor-community/keep-awake.git /issues"
   }
 }

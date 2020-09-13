@@ -1,5 +1,5 @@
 
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="nl.kevinboosten.keepawake.capacitorkeepawake">
+      package="com.getcapacitor.community.keepawake.keepawake">
   </manifest>
   
