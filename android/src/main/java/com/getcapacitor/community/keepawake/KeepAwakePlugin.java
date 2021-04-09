@@ -15,7 +15,6 @@ public class KeepAwake extends Plugin {
         getBridge()
             .executeOnMainThread(
                 new Runnable() {
-
                     @Override
                     public void run() {
                         Window window = getActivity().getWindow();
@@ -31,7 +30,6 @@ public class KeepAwake extends Plugin {
         getBridge()
             .executeOnMainThread(
                 new Runnable() {
-
                     @Override
                     public void run() {
                         Window window = getActivity().getWindow();
