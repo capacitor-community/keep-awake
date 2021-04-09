@@ -1,4 +1,5 @@
 import { registerPlugin } from '@capacitor/core';
+
 import type { KeepAwakePlugin } from './definitions';
 
 const KeepAwake = registerPlugin<KeepAwakePlugin>('KeepAwake', {
