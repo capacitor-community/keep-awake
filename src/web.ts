@@ -4,12 +4,10 @@ import type { KeepAwakePlugin } from './definitions';
 
 export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   async keepAwake(): Promise<void> {
-    console.log('KeepAwake does not support web');
-    return Promise.resolve();
+    throw this.unimplemented('Not implemented on web.');
   }
 
   async allowSleep(): Promise<void> {
-    console.log('KeepAwake does not support web');
-    return Promise.resolve();
+    throw this.unimplemented('Not implemented on web.');
   }
 }
