@@ -52,11 +52,39 @@ const allowSleep = async () => {
 ## API
 
 <docgen-index>
+
+* [`keepAwake()`](#keepawake)
+* [`allowSleep()`](#allowsleep)
+
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
+### keepAwake()
+
+```typescript
+keepAwake() => Promise<void>
+```
+
+Prevent the device from dimming the screen.
+
+Only available for Android and iOS.
+
+--------------------
+
+
+### allowSleep()
+
+```typescript
+allowSleep() => Promise<void>
+```
+
+Allow the device to dim the screen.
+
+Only available for Android and iOS.
+
+--------------------
 
 </docgen-api>
 
