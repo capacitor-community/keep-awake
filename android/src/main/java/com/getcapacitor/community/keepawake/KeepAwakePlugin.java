@@ -8,14 +8,13 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "KeepAwake")
-public class KeepAwake extends Plugin {
+public class KeepAwakePlugin extends Plugin {
 
     @PluginMethod
     public void keepAwake(final PluginCall call) {
         getBridge()
             .executeOnMainThread(
                 new Runnable() {
-
                     @Override
                     public void run() {
                         Window window = getActivity().getWindow();
@@ -31,7 +30,6 @@ public class KeepAwake extends Plugin {
         getBridge()
             .executeOnMainThread(
                 new Runnable() {
-
                     @Override
                     public void run() {
                         Window window = getActivity().getWindow();
