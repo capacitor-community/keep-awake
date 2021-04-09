@@ -8,7 +8,7 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "KeepAwake")
-public class KeepAwake extends Plugin {
+public class KeepAwakePlugin extends Plugin {
 
     @PluginMethod
     public void keepAwake(final PluginCall call) {
