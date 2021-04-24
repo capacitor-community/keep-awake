@@ -2,7 +2,7 @@
 <h3 align="center">Keep Awake</h3>
 <p align="center"><strong><code>@capacitor-community/keep-awake</code></strong></p>
 <p align="center">
-  Capacitor community plugin to prevent your screen from getting some sleep!
+  ⚡️ Capacitor plugin to prevent devices from dimming or locking the screen. 
 </p>
 
 <p align="center">
