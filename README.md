@@ -73,8 +73,6 @@ keepAwake() => Promise<void>
 
 Prevent the device from dimming the screen.
 
-Only available for Android and iOS.
-
 --------------------
 
 
@@ -85,8 +83,6 @@ allowSleep() => Promise<void>
 ```
 
 Allow the device to dim the screen.
-
-Only available for Android and iOS.
 
 --------------------
 
