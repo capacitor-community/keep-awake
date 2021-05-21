@@ -57,8 +57,8 @@ const allowSleep = async () => {
 
 <docgen-index>
 
-- [`keepAwake()`](#keepawake)
-- [`allowSleep()`](#allowsleep)
+* [`keepAwake()`](#keepawake)
+* [`allowSleep()`](#allowsleep)
 
 </docgen-index>
 
@@ -73,7 +73,8 @@ keepAwake() => Promise<void>
 
 Prevent the device from dimming the screen.
 
----
+--------------------
+
 
 ### allowSleep()
 
@@ -83,7 +84,7 @@ allowSleep() => Promise<void>
 
 Allow the device to dim the screen.
 
----
+--------------------
 
 </docgen-api>
 
