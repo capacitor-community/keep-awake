@@ -2,7 +2,7 @@
 <h3 align="center">Keep Awake</h3>
 <p align="center"><strong><code>@capacitor-community/keep-awake</code></strong></p>
 <p align="center">
-  ⚡️ Capacitor plugin to prevent devices from dimming or locking the screen. 
+  ⚡️ Capacitor plugin to prevent devices from dimming or locking the screen.
 </p>
 
 <p align="center">
@@ -19,14 +19,14 @@
 
 ## Maintainers
 
-| Maintainer | GitHub                                    | Social                                        |
-| ---------- | ----------------------------------------- | --------------------------------------------- |
-| Kevin Boosten | [boosten](https://github.com/boosten) | [@Boostuh1](https://twitter.com/Boostuh1) |
-| Robin Genz | [robingenz](https://github.com/robingenz) | [@robin_genz](https://twitter.com/robin_genz) |
+| Maintainer    | GitHub                                          | Social                                            |
+| ------------- | ----------------------------------------------- | ------------------------------------------------- |
+| Kevin Boosten | [kevinboosten](https://github.com/kevinboosten) | [@kevinboosten](https://twitter.com/kevinboosten) |
+| Robin Genz    | [robingenz](https://github.com/robingenz)       | [@robin_genz](https://twitter.com/robin_genz)     |
 
 ## Installation
 
-```
+```shell
 npm install @capacitor-community/keep-awake
 npx cap sync
 ```
@@ -45,12 +45,12 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 import { KeepAwake } from '@capacitor-community/keep-awake';
 
 const keepAwake = async () => {
-    await KeepAwake.keepAwake();
-}
+  await KeepAwake.keepAwake();
+};
 
 const allowSleep = async () => {
-    await KeepAwake.allowSleep();
-}
+  await KeepAwake.allowSleep();
+};
 ```
 
 ## API
