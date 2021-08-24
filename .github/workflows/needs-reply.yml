@@ -2,14 +2,14 @@ name: Close old issues that need reply
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
 
 jobs:
-  build:
+  needs-reply:
     runs-on: ubuntu-latest
     steps:
       - name: Close old issues that need reply
         uses: dwieeb/needs-reply@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-label: needs reply
+          issue-label: 'needs: reply'

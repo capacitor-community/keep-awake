@@ -6,7 +6,7 @@ on:
       - created
 
 jobs:
-  build:
+  needs-reply:
     runs-on: ubuntu-latest
     steps:
       - name: Remove needs-reply label
@@ -16,6 +16,6 @@ jobs:
           route: DELETE /repos/:repository/issues/:issue/labels/:label
           repository: ${{ github.repository }}
           issue: ${{ github.event.issue.number }}
-          label: needs reply
+          label: 'needs: reply'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
