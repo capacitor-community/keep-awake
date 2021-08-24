@@ -6,6 +6,16 @@ labels: ""
 assignees: ""
 ---
 
+**Plugin version:**
+<!-- List the plugin version that this bug affects. -->
+
+
+
+**Platform(s):**
+<!-- List the platforms that this bug affects. -->
+
+
+
 **Current behavior:**
 <!-- Describe how the bug manifests. -->
 
