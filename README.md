@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://github.com/capacitor-community/keep-awake/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capacitor-community/keep-awake/CI/master?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/keep-awake"><img src="https://img.shields.io/npm/l/@capacitor-community/keep-awake?style=flat-square" /></a>
 <br>
