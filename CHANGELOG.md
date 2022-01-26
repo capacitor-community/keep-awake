@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/capacitor-community/keep-awake/compare/v2.1.0...v2.1.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* inline source code in esm map files ([5599c4d](https://github.com/capacitor-community/keep-awake/commit/5599c4dcb04c56812e1be7dd499c35c7bdf08291))
+
 ## [2.1.0](https://github.com/capacitor-community/keep-awake/compare/v2.0.0...v2.1.0) (2021-04-24)
 
 
