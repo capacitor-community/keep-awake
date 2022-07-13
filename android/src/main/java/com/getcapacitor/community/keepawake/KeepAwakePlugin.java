@@ -39,4 +39,11 @@ public class KeepAwakePlugin extends Plugin {
                 }
             );
     }
+
+    @PluginMethod
+    public void isSupported(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("isSupported", true);
+        call.resolve(ret);
+    }
 }

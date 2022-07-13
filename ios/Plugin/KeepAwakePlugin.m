@@ -6,4 +6,5 @@
 CAP_PLUGIN(KeepAwakePlugin, "KeepAwake",
            CAP_PLUGIN_METHOD(keepAwake, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(allowSleep, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(isSupported, CAPPluginReturnPromise);
 )

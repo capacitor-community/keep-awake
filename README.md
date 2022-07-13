@@ -51,6 +51,12 @@ const keepAwake = async () => {
 const allowSleep = async () => {
   await KeepAwake.allowSleep();
 };
+
+
+const isSupported = async () => {
+  const result = await Badge.isSupported();
+  return result.isSupported;
+};
 ```
 
 ## API
@@ -59,6 +65,8 @@ const allowSleep = async () => {
 
 * [`keepAwake()`](#keepawake)
 * [`allowSleep()`](#allowsleep)
+* [`isSupported()`](#issupported)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -85,6 +93,29 @@ allowSleep() => Promise<void>
 Allow the device to dim the screen.
 
 --------------------
+
+
+### isSupported()
+
+```typescript
+isSupported() => Promise<IsSupportedResult>
+```
+
+Whether keep awake is supported or not.
+
+**Returns:** <code>Promise&lt;<a href="#issupportedresult">IsSupportedResult</a>&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### IsSupportedResult
+
+| Prop              | Type                 |
+| ----------------- | -------------------- |
+| **`isSupported`** | <code>boolean</code> |
 
 </docgen-api>
 

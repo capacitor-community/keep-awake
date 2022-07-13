@@ -25,4 +25,10 @@ public class KeepAwakePlugin: CAPPlugin {
             call.resolve()
         }
     }
+
+    @objc func isSupported(_ call: CAPPluginCall) {
+        call.resolve([
+            "isSupported": true
+        ])
+    }
 }
