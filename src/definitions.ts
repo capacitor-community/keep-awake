@@ -7,4 +7,12 @@ export interface KeepAwakePlugin {
    * Allow the device to dim the screen.
    */
   allowSleep(): Promise<void>;
+  /**
+   * Whether keep awake is supported or not.
+   */
+  isSupported(): Promise<IsSupportedResult>;
+}
+
+export interface IsSupportedResult {
+  isSupported: boolean;
 }

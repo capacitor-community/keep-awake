@@ -1,13 +1,13 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { KeepAwakePlugin } from './definitions';
+import type { IsSupportedResult, KeepAwakePlugin } from './definitions';
 
 export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   private wakeLock: WakeLockSentinel | null = null;
-  private readonly isSupported = 'wakeLock' in navigator;
+  private readonly _isSupported = 'wakeLock' in navigator;
 
   public async keepAwake(): Promise<void> {
-    if (!this.isSupported) {
+    if (!this._isSupported) {
       this.throwUnsupportedError();
     }
     if (this.wakeLock) {
@@ -17,11 +17,18 @@ export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   }
 
   public async allowSleep(): Promise<void> {
-    if (!this.isSupported) {
+    if (!this._isSupported) {
       this.throwUnsupportedError();
     }
     this.wakeLock?.release();
     this.wakeLock = null;
+  }
+
+  public async isSupported(): Promise<IsSupportedResult> {
+    const result = {
+      isSupported: this._isSupported,
+    };
+    return result;
   }
 
   private throwUnsupportedError(): never {
