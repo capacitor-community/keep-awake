@@ -54,7 +54,7 @@ const allowSleep = async () => {
 
 
 const isSupported = async () => {
-  const result = await Badge.isSupported();
+  const result = await KeepAwake.isSupported();
   return result.isSupported;
 };
 ```
