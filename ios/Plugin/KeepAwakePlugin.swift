@@ -10,7 +10,7 @@ public class KeepAwakePlugin: CAPPlugin {
 
     @objc func keepAwake(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
-            if(!UIApplication.shared.isIdleTimerDisabled) {
+            if !UIApplication.shared.isIdleTimerDisabled {
                 UIApplication.shared.isIdleTimerDisabled = true
             }
             call.resolve()
@@ -19,7 +19,7 @@ public class KeepAwakePlugin: CAPPlugin {
 
     @objc func allowSleep(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
-            if(UIApplication.shared.isIdleTimerDisabled) {
+            if UIApplication.shared.isIdleTimerDisabled {
                 UIApplication.shared.isIdleTimerDisabled = false
             }
             call.resolve()
