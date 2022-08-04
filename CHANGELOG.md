@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/capacitor-community/keep-awake/compare/v2.1.1...v3.0.0) (2022-08-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* This plugin now only supports Capacitor 4.
+
+### Features
+
+* add `isSupported` method ([#28](https://github.com/capacitor-community/keep-awake/issues/28)) ([57779c6](https://github.com/capacitor-community/keep-awake/commit/57779c6b25a9b7389d1e471b8fbfe9aae3bc7f87))
+* update to Capacitor 4 ([#32](https://github.com/capacitor-community/keep-awake/issues/32)) ([e098f7d](https://github.com/capacitor-community/keep-awake/commit/e098f7d205ddbee877c2b88b924d2821fec77309))
+
 ### [2.1.1](https://github.com/capacitor-community/keep-awake/compare/v2.1.0...v2.1.1) (2022-01-26)
 
 
