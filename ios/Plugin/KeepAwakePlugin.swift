@@ -31,4 +31,12 @@ public class KeepAwakePlugin: CAPPlugin {
             "isSupported": true
         ])
     }
+
+    @objc func isKeptAwake(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            call.resolve([
+                "isKeptAwake": UIApplication.shared.isIdleTimerDisabled
+            ])
+        }
+    }
 }

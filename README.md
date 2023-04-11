@@ -52,10 +52,14 @@ const allowSleep = async () => {
   await KeepAwake.allowSleep();
 };
 
-
 const isSupported = async () => {
   const result = await KeepAwake.isSupported();
   return result.isSupported;
+};
+
+const isKeptAwake = async () => {
+  const result = await KeepAwake.isKeptAwake();
+  return result.isKeptAwake;
 };
 ```
 
@@ -66,6 +70,7 @@ const isSupported = async () => {
 * [`keepAwake()`](#keepawake)
 * [`allowSleep()`](#allowsleep)
 * [`isSupported()`](#issupported)
+* [`isKeptAwake()`](#iskeptawake)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -108,6 +113,19 @@ Whether keep awake is supported or not.
 --------------------
 
 
+### isKeptAwake()
+
+```typescript
+isKeptAwake() => Promise<IsKeptAwakeResult>
+```
+
+Check if the device is kept awake.
+
+**Returns:** <code>Promise&lt;<a href="#iskeptawakeresult">IsKeptAwakeResult</a>&gt;</code>
+
+--------------------
+
+
 ### Interfaces
 
 
@@ -116,6 +134,13 @@ Whether keep awake is supported or not.
 | Prop              | Type                 |
 | ----------------- | -------------------- |
 | **`isSupported`** | <code>boolean</code> |
+
+
+#### IsKeptAwakeResult
+
+| Prop              | Type                 |
+| ----------------- | -------------------- |
+| **`isKeptAwake`** | <code>boolean</code> |
 
 </docgen-api>
 

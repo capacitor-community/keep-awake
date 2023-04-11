@@ -15,13 +15,10 @@ public class KeepAwakePlugin extends Plugin {
     public void keepAwake(final PluginCall call) {
         getBridge()
             .executeOnMainThread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        Window window = getActivity().getWindow();
-                        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        call.resolve();
-                    }
+                () -> {
+                    Window window = getActivity().getWindow();
+                    window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    call.resolve();
                 }
             );
     }
@@ -30,13 +27,10 @@ public class KeepAwakePlugin extends Plugin {
     public void allowSleep(final PluginCall call) {
         getBridge()
             .executeOnMainThread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        Window window = getActivity().getWindow();
-                        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        call.resolve();
-                    }
+                () -> {
+                    Window window = getActivity().getWindow();
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    call.resolve();
                 }
             );
     }
@@ -46,5 +40,22 @@ public class KeepAwakePlugin extends Plugin {
         JSObject ret = new JSObject();
         ret.put("isSupported", true);
         call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void isKeptAwake(final PluginCall call) {
+        getBridge()
+            .executeOnMainThread(
+                () -> {
+                    // use the "bitwise and" operator to check if FLAG_KEEP_SCREEN_ON is on or off
+                    // credits: https://stackoverflow.com/a/24214209/9979122
+                    int flags = getActivity().getWindow().getAttributes().flags;
+                    boolean isKeptAwake = (flags & WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) != 0;
+
+                    JSObject ret = new JSObject();
+                    ret.put("isKeptAwake", isKeptAwake);
+                    call.resolve(ret);
+                }
+            );
     }
 }

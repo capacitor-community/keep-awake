@@ -11,8 +11,16 @@ export interface KeepAwakePlugin {
    * Whether keep awake is supported or not.
    */
   isSupported(): Promise<IsSupportedResult>;
+  /**
+   * Check if the device is kept awake.
+   */
+  isKeptAwake(): Promise<IsKeptAwakeResult>;
 }
 
 export interface IsSupportedResult {
   isSupported: boolean;
+}
+
+export interface IsKeptAwakeResult {
+  isKeptAwake: boolean;
 }
