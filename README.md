@@ -52,10 +52,14 @@ const allowSleep = async () => {
   await KeepAwake.allowSleep();
 };
 
-
 const isSupported = async () => {
   const result = await KeepAwake.isSupported();
   return result.isSupported;
+};
+
+const isKeptAwake = async () => {
+  const result = await KeepAwake.isKeptAwake();
+  return result.isKeptAwake;
 };
 ```
 
