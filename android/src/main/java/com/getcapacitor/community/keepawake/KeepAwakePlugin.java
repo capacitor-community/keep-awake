@@ -15,13 +15,10 @@ public class KeepAwakePlugin extends Plugin {
     public void keepAwake(final PluginCall call) {
         getBridge()
             .executeOnMainThread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        Window window = getActivity().getWindow();
-                        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        call.resolve();
-                    }
+                () -> {
+                    Window window = getActivity().getWindow();
+                    window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    call.resolve();
                 }
             );
     }
@@ -30,13 +27,10 @@ public class KeepAwakePlugin extends Plugin {
     public void allowSleep(final PluginCall call) {
         getBridge()
             .executeOnMainThread(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        Window window = getActivity().getWindow();
-                        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                        call.resolve();
-                    }
+                () -> {
+                    Window window = getActivity().getWindow();
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                    call.resolve();
                 }
             );
     }
