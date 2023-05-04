@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/capacitor-community/keep-awake/compare/v3.0.0...v4.0.0) (2023-05-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to Capacitor 5 (#37)
+
+### Features
+
+* add `isKeptAwake` method ([#38](https://github.com/capacitor-community/keep-awake/issues/38)) ([ea118ba](https://github.com/capacitor-community/keep-awake/commit/ea118ba9ee46fbd5c43ca3458237709670d5ca98))
+* update gradle to 8.0.2 and gradle plugin to 8.0.0 ([77b1e1e](https://github.com/capacitor-community/keep-awake/commit/77b1e1eae2aa30b1ff6988534986425f3dddaa61))
+* update to Capacitor 5 ([#37](https://github.com/capacitor-community/keep-awake/issues/37)) ([8fdc85a](https://github.com/capacitor-community/keep-awake/commit/8fdc85abf2358004475a67fbd4afa35729004b89))
+
 ## [3.0.0](https://github.com/capacitor-community/keep-awake/compare/v2.1.1...v3.0.0) (2022-08-04)
 
 
