@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/keep-awake",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Prevent your screen from getting some sleep!",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
