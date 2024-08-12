@@ -8,7 +8,8 @@ import type {
 
 export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   private wakeLock: WakeLockSentinel | null = null;
-  private readonly _isSupported = 'wakeLock' in navigator;
+  private readonly _isSupported =
+    typeof navigator !== 'undefined' && 'wakeLock' in navigator;
 
   public async keepAwake(): Promise<void> {
     if (!this._isSupported) {
