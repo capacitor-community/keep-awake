@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/capacitor-community/keep-awake/compare/v5.0.0...v5.0.1) (2024-08-12)
+
+
+### Bug Fixes
+
+* **web:** add ssr compatibility ([#49](https://github.com/capacitor-community/keep-awake/issues/49)) ([55b23cd](https://github.com/capacitor-community/keep-awake/commit/55b23cd1389c509bb1906b5ebe68f021a3daf189))
+* **web:** keep app awake after returning from the background ([#48](https://github.com/capacitor-community/keep-awake/issues/48)) ([39b6e0c](https://github.com/capacitor-community/keep-awake/commit/39b6e0cf0c186210f0022d4a7bcb2fe6e2ba01e6))
+
 ## [5.0.0](https://github.com/capacitor-community/keep-awake/compare/v4.0.0...v5.0.0) (2024-04-16)
 
 
