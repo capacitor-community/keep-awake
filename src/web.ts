@@ -1,15 +1,10 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type {
-  IsKeptAwakeResult,
-  IsSupportedResult,
-  KeepAwakePlugin,
-} from './definitions';
+import type { IsKeptAwakeResult, IsSupportedResult, KeepAwakePlugin } from './definitions';
 
 export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   private wakeLock: WakeLockSentinel | null = null;
-  private readonly _isSupported =
-    typeof navigator !== 'undefined' && 'wakeLock' in navigator;
+  private readonly _isSupported = typeof navigator !== 'undefined' && 'wakeLock' in navigator;
 
   private handleVisibilityChange = () => {
     if (document.visibilityState === 'visible') this.keepAwake();
@@ -33,14 +28,8 @@ export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
     }
     this.wakeLock?.release();
     this.wakeLock = null;
-    document.removeEventListener(
-      'visibilitychange',
-      this.handleVisibilityChange,
-    );
-    document.removeEventListener(
-      'fullscreenchange',
-      this.handleVisibilityChange,
-    );
+    document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    document.removeEventListener('fullscreenchange', this.handleVisibilityChange);
   }
 
   public async isSupported(): Promise<IsSupportedResult> {
@@ -61,8 +50,6 @@ export class KeepAwakeWeb extends WebPlugin implements KeepAwakePlugin {
   }
 
   private throwUnsupportedError(): never {
-    throw this.unavailable(
-      'Screen Wake Lock API not available in this browser.',
-    );
+    throw this.unavailable('Screen Wake Lock API not available in this browser.');
   }
 }
