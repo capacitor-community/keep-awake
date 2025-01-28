@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/capacitor-community/keep-awake/compare/v5.0.1...v6.0.0) (2025-01-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to Capacitor 7 (#51)
+
+### Features
+
+* update to Capacitor 7 ([#51](https://github.com/capacitor-community/keep-awake/issues/51)) ([ca9bcb3](https://github.com/capacitor-community/keep-awake/commit/ca9bcb356c2c3c25a2286564c47ff1238b084227))
+
 ### [5.0.1](https://github.com/capacitor-community/keep-awake/compare/v5.0.0...v5.0.1) (2024-08-12)
 
 
