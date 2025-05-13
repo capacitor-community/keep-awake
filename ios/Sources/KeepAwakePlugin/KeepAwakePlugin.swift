@@ -6,9 +6,17 @@ import Capacitor
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(KeepAwakePlugin)
-public class KeepAwakePlugin: CAPPlugin {
+public class KeepAwakePlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "KeepAwakePlugin"
+    public let jsName = "KeepAwake"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "keepAwake", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "allowSleep", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "isSupported", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "isKeptAwake", returnType: CAPPluginReturnPromise)
+    ]
 
-    @objc func keepAwake(_ call: CAPPluginCall) {
+     @objc func keepAwake(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
             if !UIApplication.shared.isIdleTimerDisabled {
                 UIApplication.shared.isIdleTimerDisabled = true
