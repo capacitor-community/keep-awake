@@ -16,7 +16,7 @@ public class KeepAwakePlugin: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "isKeptAwake", returnType: CAPPluginReturnPromise)
     ]
 
-     @objc func keepAwake(_ call: CAPPluginCall) {
+    @objc func keepAwake(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
             if !UIApplication.shared.isIdleTimerDisabled {
                 UIApplication.shared.isIdleTimerDisabled = true
