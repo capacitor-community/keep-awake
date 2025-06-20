@@ -2,17 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [8.0.0](https://github.com/capacitor-community/keep-awake/compare/v5.0.1...v8.0.0) (2025-06-20)
+## [7.1.0](https://github.com/capacitor-community/keep-awake/compare/v7.0.0...v7.1.0) (2025-06-20)
 
-
-### ⚠ BREAKING CHANGES
-
-* update to Capacitor 7 (#51)
 
 ### Features
 
 * **ios:** Add SPM support ([#55](https://github.com/capacitor-community/keep-awake/issues/55)) ([ffeb13e](https://github.com/capacitor-community/keep-awake/commit/ffeb13ea49515b84e6674cbc932ad4c9b8c251d8))
-* update to Capacitor 7 ([#51](https://github.com/capacitor-community/keep-awake/issues/51)) ([ca9bcb3](https://github.com/capacitor-community/keep-awake/commit/ca9bcb356c2c3c25a2286564c47ff1238b084227))
 
 ## [7.0.0](https://github.com/capacitor-community/keep-awake/compare/v6.0.0...v7.0.0) (2025-02-07)
 
