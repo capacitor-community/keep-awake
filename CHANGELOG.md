@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/capacitor-community/keep-awake/compare/v7.1.0...v8.0.0) (2025-12-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* This plugin now supports Capacitor 8.
+
+### Features
+
+* update to Capacitor 8 ([#68](https://github.com/capacitor-community/keep-awake/issues/68)) ([4e1543e](https://github.com/capacitor-community/keep-awake/commit/4e1543e3b53b961f6b037730f427537f871f6366))
+
 ## [7.1.0](https://github.com/capacitor-community/keep-awake/compare/v7.0.0...v7.1.0) (2025-06-20)
 
 
