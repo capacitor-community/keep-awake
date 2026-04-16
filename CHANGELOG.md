@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [8.0.1](https://github.com/capacitor-community/keep-awake/compare/v8.0.0...v8.0.1) (2026-04-16)
+
+
+### Bug Fixes
+
+* AGP 9.0 no longer supports `proguard-android.txt` ([#87](https://github.com/capacitor-community/keep-awake/issues/87)) ([e707399](https://github.com/capacitor-community/keep-awake/commit/e707399dffc255c622b8cf00a1c92420d06da485))
 
 ## [8.0.0](https://github.com/capacitor-community/keep-awake/compare/v7.1.0...v8.0.0) (2025-12-20)
 
